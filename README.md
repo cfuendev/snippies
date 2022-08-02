@@ -73,3 +73,26 @@ dayjs()
   .minute(0)
   .second(0)
 ```
+
+### getObjectsWithUniqueProperty
+
+A function that takes an array of objects and returns a copy where no element has a duplicate value of a specified property.
+
+For example:
+
+```javascript
+// articles is a list of articles. Some of the articles have the same name
+let articles: {}[] = [
+  {title: "a", content: "aaaaa"},
+  {title: "b", content: "bbbbb"},
+  {title: "b", content: "ccccc"},
+  {title: "c", content: "ddddd"},
+  {title: "d", content: "eeeee"},
+  {title: "c", content: "fffff"},
+];
+
+// so, to get an array of articles with distinct titles
+getObjectsWithUniqueValue(articles, "title");
+// [ {title: "a", content: "aaaaa"}, {title: "b", content: "bbbbb"}, {title: "c", content: "ddddd"}, {title: "d", content: "eeeee"}];
+```
+
