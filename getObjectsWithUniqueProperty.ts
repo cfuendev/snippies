@@ -1,4 +1,4 @@
-let getObjectsWithUniqueValue = (arr: {}[], prop: string) => {
+let getObjectsWithUniqueProperty = (arr: {}[], prop: string) => {
   let uniqueBuffer: any = [];
   let uniqueResult: any = [];
   arr.forEach((arrItem: any) => {
