@@ -1,6 +1,18 @@
 # snippies
 Helpers and wrappers that implement stuff I'm not willing to re-invent
 
+<!--
+Utils
+  @cfuen-utils/deep-copy
+  @cfuen-utils/unique-property
+  @cfuen-utils/remove-from-array
+  @cfuen-utils/thousand-comma
+
+Snippets
+  fuseSearch
+  dayjs-semantic-months
+-->
+
 ### fuseSearch
 A single wrapper that abstracts basic Fuse.js searches down to a single function
 
