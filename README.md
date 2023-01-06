@@ -3,7 +3,7 @@ Helpers and wrappers that implement stuff I'm not willing to re-invent
 
 <!--
 Utils
-  @cfuen-utils/deep-copy
+  @cfuen-utils/deep-equal
   @cfuen-utils/unique-property
   @cfuen-utils/remove-from-array
   @cfuen-utils/thousand-comma
