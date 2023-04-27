@@ -3,10 +3,11 @@ Helpers and wrappers that implement stuff I'm not willing to re-invent
 
 <!--
 Utils
-  @cfuen-utils/deep-equal
-  @cfuen-utils/unique-property
-  @cfuen-utils/remove-from-array
-  @cfuen-utils/thousand-comma
+  @cfuen/deep-equal
+  @cfuen/unique-property
+  @cfuen/remove-from-array
+  @cfuen/thousand-comma
+  @cfuen/kobeni-stutter
 
 Snippets
   fuseSearch
@@ -108,3 +109,25 @@ getObjectsWithUniqueValue(articles, "title");
 // [ {title: "a", content: "aaaaa"}, {title: "b", content: "bbbbb"}, {title: "c", content: "ddddd"}, {title: "d", content: "eeeee"}];
 ```
 
+### kobeniStuter
+
+A module that exposes a function through which you can make any string look like Kobeni Higashikata from Chainsaw Man is saying it. Currently using it for a small personal project, but I'm pretty sure there's someone out there who wants to automate text string kobenification.
+
+The output is randomized and depends on the amount of words that the string passed to the main `kobeniStutterString()` function is made up of. First, a random word is "stuttered" to make sure that if the String is a single word, that word is "stuttered". In the case that the string is longer than a word, for the remaining words, if the number of words is even, half of the words will be "stuttered". If the number is odd, only a third of the words will be "stuttered".
+
+For example, for the input:
+
+```js
+kobeniStutterString("Hi! I'm Kobeni!")
+```
+
+We can get:
+
+- "H-H-Hi! I'm K-K-Kobeni!"
+- "H-Hi! I'm K-Kobeni!"
+- "Hi! I-I-I'm K-Kobeni!"
+- "H-H-Hi! I-I-I'm Kobeni!"
+
+And so on.
+
+For now, this module doesn't support inserting ellipsis (...) into the original text, but that will be easily added later.
