@@ -42,5 +42,3 @@ const kobeniStutterString = (str) => {
   }
   return stutterStr.join(" ");
 };
-
-kobeniStutterString("Hi");
