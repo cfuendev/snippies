@@ -1,0 +1,10 @@
+{
+	"scripts": {
+		"euger": "set NODE_ENV=dev && pm2 scripts/euger.js"
+	},
+	"dependencies": {
+		"dayjs": "^1.11.9",
+		"dotenv": "^16.3.1",
+		"pm2": "^5.3.0"
+	}
+}
