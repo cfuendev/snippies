@@ -4,7 +4,7 @@ Helpers, wrappers, userscripts and code in general that WILL be useful in the fu
 ### Categories
 
 **Scripts**
-Full fledged programs designed as drop-in to perform specific tasks.
+Full fledged programs designed as drop-in executables to perform specific tasks.
 
 **Userscripts**
 Userscripts are scripts that are typically executed by web browsers to modify the behavior or appearance of websites. They need to be loaded by script-injecting extensions like Tampermonkey (Or via the browser's own script-injection capabilities, something that both [Min](https://github.com/minbrowser/min) and [Via](https://github.com/tuyafeng/Via) Browsers have)
