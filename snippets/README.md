@@ -1,3 +1,61 @@
+### color-parse
+A microlibrary (Available as both a cjs and mjs module) for parsing strings into HEX with support for:
+- CSS Color Names (ie. `red`, `blue`, `green`, `white`, `black`, etc.)
+- RGB (Must be the `rgb(rrr,ggg,bbb)` or `rrr,ggg,bbb` formats)
+- HEX (Must be `#RRGGBB` or `0xRRGGBB` formats)
+- Tailwind Colors (ie. `blue-500`, `lime-200`, `zinc-400`, etc.)
+
+I'm planning to support more colors in the future such as LSV, HSL and Imba colors, but for now this is it.
+
+Here's a (quite lengthy) example from my Discord Bot 'Sudo':
+
+```js
+    try {
+      parsedColor = cssUtils.parseRGB(options.color);
+      console.log(`⚙️  The provided value '${options.color}' is an RGB value: ${parsedColor.toString(16)}`);
+    } catch (err) {
+      console.log(
+        `⚙️  The provided value '${options.color}' is not an rgb() nor a comma-delimited RGB value`
+      );
+    }
+
+    if (!parsedColor) {
+      try {
+        parsedColor = cssUtils.parseHEX(options.color);
+        console.log(`⚙️  The provided value '${options.color}' is a HEX value: ${parsedColor.toString(16)}`);
+      } catch (err) {
+        console.log(
+          `⚙️  The provided value '${options.color}' is not a # nor a 0x HEX value`
+        );
+      }
+    }
+
+    if (!parsedColor) {
+      try {
+        parsedColor = cssUtils.parseTailwindColor(options.color);
+        console.log(`⚙️  The provided value '${options.color}' is a Tailwind color: ${parsedColor.toString(16)}`);
+      } catch (err) {
+        console.log(
+          `⚙️  The provided value '${options.color}' is not a Tailwind color`
+        );
+      }
+    }
+
+    // El último error no se catchea para elevarlo y que Sudo lo reporte al usuario
+    if (!parsedColor) {
+      parsedColor = cssUtils.parseCSSColorName(options.color);
+      console.log(`⚙️  The provided value '${options.color}' is a CSS Color: ${parsedColor.toString(16)}`);
+    }
+
+    botIO._bot.guilds.get(botIO._msg.guildID).createRole(
+      {
+        name: name,
+        color: parsedColor,
+      },
+      (reason = options.reason)
+    );
+```
+
 ### fuseSearch
 A single wrapper that abstracts basic Fuse.js searches down to a single function
 
