@@ -1,0 +1,22 @@
+{% macro more_input(id, label, style="") %}
+<div id="{{id}}-Wrapper" style="{{ style }}">
+    <label for="{{id}}-1">{{ label }}</label>
+    <input type="text" id="{{id}}-1" name="{{id}}-1">
+    <button class="Plus"><iconify-icon icon="tabler:plus" width="15px"></iconify-icon></button>
+</div>
+
+<script>
+    document.querySelector('#{{id}}-Wrapper > button.Plus').addEventListener('click', (e) => {
+        e.preventDefault();
+        const newInputElm = document.createElement('input')
+        const inputElmAmount = Array.from(document.querySelectorAll('#{{id}}-Wrapper > input')).length
+        console.log(inputElmAmount)
+        newInputElm.type = 'text'
+        newInputElm.id = `{{id}}-${inputElmAmount + 1}`
+        const plusButton = document.querySelector('#{{id}}-Wrapper > button.Plus')
+        plusButton.remove();
+        document.querySelector('#{{id}}-Wrapper').appendChild(newInputElm)
+        document.querySelector('#{{id}}-Wrapper').appendChild(plusButton)
+    })
+</script>
+{% endmacro %}

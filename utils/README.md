@@ -46,3 +46,21 @@ And so on.
 
 **NOTE:**
 For now, this module doesn't support inserting ellipsis (...) into the original text, but that will be easily added later.
+
+### more_input
+
+This is a simple Jinja macro (Basically a component) to quickly implement those inputs where you press a '+' button and it gives you another input.
+
+You can import it by doing:
+
+```jinja
+{% from "./your/path/idk/more_input.jinja" import more_input %}
+```
+
+Then use it:
+
+```jinja
+    <form>
+        {{ more_input('Test', 'Test Plus Input', style="display: flex; flex-direction: column; gap: 5px;") }}
+    </form>
+```
