@@ -1,0 +1,1 @@
+SET PM2_HOME=C:\Users\cfuen\.pm2cd C:\Users\cfuen\Programming\Code\Public\snippiespm2 start euger.js

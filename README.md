@@ -16,16 +16,3 @@ Small utility libraries that could potentially be standalone npm packages. These
 Pieces of code that either serve as references or can be directly implemented for specific functionalities after a bit of re-writing. They are not standalone utilities, as they may require further configuration or integration into existing programs. These snippets can be used as building blocks or as examples for implementing specific features.
 
 Feel free to explore the Snippies collection, leverage the resources, and customize them to suit your specific needs. They're divided in folders which represent the different categories, so if you're looking for documentation open any of the folders and read the README.md file in it.
-
-<!--
-Utils
-  @cfuen/deep-equal
-  @cfuen/unique-property
-  @cfuen/remove-from-array
-  @cfuen/thousand-comma
-  @cfuen/kobeni-stutter
-
-Snippets
-  fuseSearch
-  dayjs-semantic-months
--->
