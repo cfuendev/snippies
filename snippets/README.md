@@ -56,6 +56,34 @@ Here's a (quite lengthy) example from my Discord Bot 'Sudo':
     );
 ```
 
+### steamdb2gamelist.js
+Function that scrapes information from [steamdb](https://steamdb.info/) game pages (ex. `https://steamdb.info/app/<game_id>`)
+
+This is useful for quickly parsing information when creating `gamelist.xml` files like the the ones [ES-DE](https://gitlab.com/es-de/emulationstation-de#es-de-frontend) uses to index games
+
+You just run it and the information is copied to your clipboard as well as output to the console.
+
+```javascript
+generateGameXMLToClipboard();
+```
+
+Example from [Counter-Strike 2](https://steamdb.info/app/730/charts/)
+
+```xml
+<game>
+  <path>...</path>
+  <name>Counter-Strike 2</name>
+  <desc>For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.</desc>
+  <releasedate>20120821T000000</releasedate>
+  <developer>Valve</developer>
+  <publisher>Valve</publisher>
+  <genre> FPS, Shooter, Competitive, Action, Team-Based</genre>
+</game>
+```
+
+Do bear in mind, this only generates the `name`, `desc`, `releaseDate`, `developer`, `publisher` and `genre` attributes.
+You still need to set other values like `path` and `players` yourself. (`path` is set to "..." since it's required)
+
 ### fuseSearch
 A single wrapper that abstracts basic Fuse.js searches down to a single function
 
