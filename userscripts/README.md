@@ -2,6 +2,14 @@
 
 Adds a button that copies the JSON metadata of the Picrew to your clipboard.
 
+### copy-steam-esde-metadata.js
+
+Adds a button that copies the metadata of a Steam Game in [gamelist.xml format](https://github.com/Aloshi/EmulationStation/blob/master/GAMELISTS.md) to your clipboard.
+
+### fuck-google-ai-results.js
+
+Hides the AI widget in Google search results.
+
 ### svelte-repl-dark.js (archive)
 
 Adds a Dark Mode toggle button to Svelte's official online REPL.

@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Copy Picrew Metadata JSON Button
+// @name         Picrew Metadata JSON Button
 // @version      2025-07-27
 // @description  Adds a button that copies the JSON metadata of the Picrew to your clipboard
 // @author       CFUEN (https://github.com/cfuendev)
