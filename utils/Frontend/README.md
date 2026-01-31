@@ -1,5 +1,16 @@
-# Frontend
+<h1> Frontend </h1>
 
+<h3> Table of Contents </h3>
+
+- [Not Deprecated](#not-deprecated)
+  - [fileFromResponse](#filefromresponse)
+  - [more\_input](#more_input)
+  - [Shiro](#shiro)
+- [Deprecated](#deprecated)
+  - [isMobile (deprecated)](#ismobile-deprecated)
+
+
+## Not Deprecated
 ### fileFromResponse
 
 This is a JavaScript function that expects a [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) representing a file (This is the way that [Flask](https://flask.palletsprojects.com/en/3.0.x/) sends files through HTTP) and automatically downloads the file obtained from the `Response` object, using the `Response.blob()` method and creating a temporary anchor element to trigger a fake `click` event, then download the file to the user's machine.

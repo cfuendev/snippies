@@ -1,3 +1,11 @@
+<h1> Snippets </h1>
+
+<h3> Table of Contents </h3>
+
+- [color-parse](#color-parse)
+- [fuseSearch](#fusesearch)
+- [dayjs-semantic-months](#dayjs-semantic-months)
+
 ### color-parse
 A microlibrary (Available as both a cjs and mjs module) for parsing strings into HEX with support for:
 - CSS Color Names (ie. `red`, `blue`, `green`, `white`, `black`, etc.)

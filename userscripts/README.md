@@ -1,3 +1,14 @@
+<h1> Userscripts </h1>
+
+<h3> Table of Contents </h3>
+
+- [copy-picrew-metadata.js](#copy-picrew-metadatajs)
+- [copy-steam-esde-metadata.js](#copy-steam-esde-metadatajs)
+- [fuck-google-ai-results.js](#fuck-google-ai-resultsjs)
+- [svelte-repl-dark.js (archive)](#svelte-repl-darkjs-archive)
+- [chatgpt-sidebar-toggle (deprecated, archive)](#chatgpt-sidebar-toggle-deprecated-archive)
+
+
 ### copy-picrew-metadata.js
 
 Adds a button that copies the JSON metadata of the Picrew to your clipboard.
