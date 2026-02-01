@@ -3,10 +3,14 @@
 <h3> Table of Contents </h3>
 
 - [spotify-m3u8.js](#spotify-m3u8js)
-- [steamdb2gamelist.js](#steamdb2gamelistjs)
+- [convert\_currency.py](#convert_currencypy)
+- [steamdb-gamelist.js](#steamdb-gamelistjs)
 - [batch\_trim\_yt.py](#batch_trim_ytpy)
 - [Euger.js 💊](#eugerjs-)
 
+---
+
+<img src="../static/spotify-m3u8-logo.png" width="80px">
 
 ### spotify-m3u8.js
 
@@ -14,7 +18,7 @@ Script that scrapes an entire Spotify playlist in the Spotify website and downlo
 
 The aim of this is to easily port your Spotify playlists as files so that you can organize your *legally owned* local files. For example, when I'm not using Spotify, I prefer to listen to my *legally owned mp3 files* via native/desktop offline players like [AIMP](https://www.aimp.ru/?do=download) or [Winamp](https://winamp.com/player)
 
-Only downside of this script is you have to refresh the page before running it again, at least for now. Copy paste the whole thing
+Only downside of this script is you have to refresh the page after running it once in order to run it a second time, and a third time, and so on; at least for now. Copy paste the whole thing in your devtools console while on a Spotify playlist page and you'll see your browser scrolling down automatically.
 
 Example from downloading my dubstep playlist "ALL THE DUB" playlist in Spotify
 
@@ -37,7 +41,21 @@ C:\Users\cfuen\Music\actual music\propertly tagged\Space Laces, Getter - Choppaz
 #EXTINF:152,Automhate - Tonal Riddim
 ```
 
-### steamdb2gamelist.js
+<img src="../static/convert_currency.png" width="80px">
+
+### convert_currency.py
+
+Forked from [Currency-Converter-CLI](https://github.com/mehrajrafid/Currency-Converter-CLI) by @mehrajrafid
+
+Script that converts from one currency to another via the [ExchangeRate-API](https://www.exchangerate-api.com/). No need to set up an API Key.
+
+```bash
+py .\convert_currency.py 500000 cop usd
+```
+
+<img src="../static/steamdb2gamelist-logo.png" width="80px">
+
+### steamdb-gamelist.js
 
 Client-side function that scrapes information from [steamdb](https://steamdb.info/) game pages (ex. `https://steamdb.info/app/<game_id>`)
 
@@ -66,6 +84,8 @@ Example from [Counter-Strike 2](https://steamdb.info/app/730/charts/)
 Do bear in mind, this only generates the `name`, `desc`, `releaseDate`, `developer`, `publisher` and `genre` attributes.
 You still need to set other values like `path` and `players` yourself. (`path` is set to "..." since it's required)
 
+<img src="../static/batch-trim-yt-logo.png" width="80px">
+
 ### batch_trim_yt.py
 
 Script that takes a file specifying many videos and their trim times, downloads them through `yt-dlp` and trims with `ffmpeg`.
@@ -80,9 +100,15 @@ https://youtu.be/qtqki60sn9E?si=jfuOXC9ACmgR7_0N
 0:29 - 1:15
 ```
 
+Then do:
+
+```bash
+py batch_trim_yt.py <your_file.txt>
+```
+
 ### Euger.js 💊
 
-Named after [Eugeroics](https://en.wikipedia.org/wiki/Eugeroic), more commonly known as wakefulness-promoting agents, `euger.js` is a script that periodically sends HTTP GET requests to a specified url. I use this script to ensure the servers I host on Replit remain active and functioning.
+Named after [Eugeroics](https://en.wikipedia.org/wiki/Eugeroic), more commonly known as wakefulness-promoting agents, `euger.js` is a script that periodically sends HTTP GET requests to a specified url. I used to keep this script running in the background to ensure the servers I hosted on Replit remain active and functioning (This was before Replit became an LLM Slop IDE).
 
 To configure Euger.js, you need to specify the target URL by setting the "EUGER_TARGET" variable in a .env file:
 ```bash

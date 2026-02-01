@@ -2,7 +2,7 @@
 <p align="center">
   <i>Helpers, wrappers, userscripts and code in general that WILL be useful in the future</i>
   <br/><br/>
-  <img width="130" alt="Mafl" src="./snippies_logo.png"/>
+  <img width="130" alt="Mafl" src="./static/snippies_logo.png"/>
   <br/><br/>
 
 ### Categories
